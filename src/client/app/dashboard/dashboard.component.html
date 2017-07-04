@@ -1,0 +1,23 @@
+<div id="page-wrapper" style="min-height: 535px;">
+    <div ui-view="" class="ng-scope">
+        <div class="container-fluid ng-scope">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Dashboard</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="ui-widget-header" style="padding:4px 10px;border-bottom: 0 none">
+                    <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+                    <input #gb type="text" pInputText size="50" placeholder="Global Search">
+                </div>
+                <p-dataTable [value]="cars" [globalFilter]="gb" [rows]="5" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]">
+                    <p-column field="vin" header="Vin" [sortable]="true"></p-column>
+                    <p-column field="year" header="Year" [sortable]="true"></p-column>
+                    <p-column field="brand" header="Brand" [sortable]="true"></p-column>
+                    <p-column field="color" header="Color" [sortable]="true"></p-column>
+                </p-dataTable>
+            </div>
+        </div>
+    </div>
+</div>
